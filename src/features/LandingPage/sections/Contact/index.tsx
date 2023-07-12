@@ -22,14 +22,11 @@ const ContactSection = () => {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
-	const onSubmit = async (e) => {
-		e.preventDefault();
-
-		const res = await fetch('/api/sendEmail', {
+	const onSubmit = async (data) => {
+		console.log('form data - ', data)
+		const res = await fetch('/api/send/email', {
 			body: JSON.stringify({
-				email: email,
-				fullname: fullname,
-				message: message,
+				...data
 			}),
 			headers: {
 				'Content-Type': 'application/json',
@@ -78,7 +75,7 @@ const ContactSection = () => {
 										fieldRef={field}
 										hasError={errors.name?.type === 'required'}
 										onChange={(e) => {
-											return setFullName(e.target.value);
+											setFullName(e.target.value);
 										}}
 									/>
 								)}
@@ -95,7 +92,7 @@ const ContactSection = () => {
 										fieldRef={field}
 										hasError={errors.email?.type === 'required'}
 										onChange={(e) => {
-											return setEmail(e.target.value);
+											setEmail(e.target.value);
 										}}
 									/>
 								)}
@@ -112,7 +109,7 @@ const ContactSection = () => {
 										fieldRef={field}
 										hasError={errors.message?.type === 'required'}
 										onChange={(e) => {
-											return setMessage(e.target.value);
+											setMessage(e.target.value);
 										}}
 									/>
 								)}
