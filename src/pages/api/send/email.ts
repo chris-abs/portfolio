@@ -13,32 +13,15 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   console.log(req.body)
-  // const msg = {
-  //   to: {
-  //     email: 'chris.abs96@gmail.com',
-  //     name: 'chris abbott',
-  //   },
-  //   from: {
-  //     email: req.body.email,
-  //     name: req.body.name
-  //   },
-  //   subject: `Contact request from ${req.body.name}`,
-  //   text: req.body.message,
-  //   html: `<p>${req.body.message}</p>`,
-  //   content: [
-  //     {
-  //       type: 'text/html',
-  //       value: '<p>Hello from Twilio SendGrid!</p><p>Sending with the email service trusted by developers and marketers for <strong>time-savings</strong>, <strong>scalability</strong>, and <strong>delivery expertise</strong>.</p><p>%open-track%</p>'
-  //     }
-  //   ],
-  // }
+
 
   const msg = {
-    to: 'chris.abs@gmail.com', // Change to your recipient
-    from: req.body.email,
-    subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    to: 'chris.abs96@gmail.com', // Change to your recipient
+    replyTo: req.body.email,
+    from: 'support@em6014.chrisabbott.dev',
+    subject: `Contact from ${req.body.email}`,
+    text: `Email from ${req.body.email} with message ${req.body.message}`,
+    html: `<strong>${req.body.message}</strong>`,
   }
 
   try {
