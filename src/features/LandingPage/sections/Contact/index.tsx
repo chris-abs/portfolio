@@ -50,7 +50,7 @@ const ContactSection = () => {
 						<Heading title="Contact" />
 					</div>
 					<div className="rounded-xl shadow-lg bg-white p-16 px-4 md:px-6">
-						<div className="grid grid-cols-2 pb-3 place-items-center">
+						<div className="grid grid-cols-2 gap-1 md:gap-3 pb-3 place-items-center">
 							<Widget
 								label="Phone"
 								description="07949 149878"
