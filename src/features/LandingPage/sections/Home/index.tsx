@@ -10,6 +10,7 @@ const HomeSection = () => {
 							Chris Abbott
 						</h2>
 						<Image
+							priority
 							fill
 							src="/belossom.jpg"
 							alt="belossom tree"
