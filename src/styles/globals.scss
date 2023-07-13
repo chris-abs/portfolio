@@ -8,6 +8,7 @@ body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	overflow-x: hidden
 }
 
 a {
@@ -18,6 +19,7 @@ a {
 * {
 	box-sizing: border-box;
 }
+
 @font-face {
 	font-family: 'burtons';
 	src: local('Burtons');
@@ -34,7 +36,7 @@ section {
 	gap: 1rem;
 }
 
-.portfolio > div {
+.portfolio>div {
 	flex: 1;
 	border-radius: 1rem;
 	background-position: center;
@@ -43,7 +45,7 @@ section {
 	transition: all 0.8s cubic-bezier(0.4, 0.4, 0.6, 1.4);
 }
 
-.portfolio > div:hover {
+.portfolio>div:hover {
 	flex: 5;
 	background: #eca988;
 }
@@ -72,14 +74,12 @@ section {
 }
 
 .icon--darkmode:hover {
-	background-image: radial-gradient(
-		circle at 30% 107%,
-		#ffc4ca 0%,
-		#daa8db 5%,
-		#bb91d1 45%,
-		#4d51a3 60%,
-		#1e2a67 90%
-	);
+	background-image: radial-gradient(circle at 30% 107%,
+			#ffc4ca 0%,
+			#daa8db 5%,
+			#bb91d1 45%,
+			#4d51a3 60%,
+			#1e2a67 90%);
 	outline-color: #323f8e;
 }
 
@@ -100,7 +100,13 @@ section {
 $particleSize: 1vmin;
 $animationDuration: 6s;
 $amount: 20;
-.background ~ span {
+
+.background {
+	overflow-x: none;
+	width: 100vh;
+}
+
+.background~span {
 	width: $particleSize;
 	height: $particleSize;
 	border-radius: $particleSize;
@@ -111,6 +117,7 @@ $amount: 20;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	$colors: (#fcfaff, #e45a84, #ffacac);
+
 	@for $i from 1 through $amount {
 		&:nth-child(#{$i}) {
 			color: nth($colors, random(length($colors)));
@@ -136,12 +143,15 @@ $amount: 20;
 	10% {
 		transform: rotate(15deg);
 	}
+
 	20% {
 		transform: rotate(-15deg);
 	}
+
 	30% {
 		transform: rotate(15deg);
 	}
+
 	40% {
 		transform: rotate(-15deg);
 	}

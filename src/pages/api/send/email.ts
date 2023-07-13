@@ -6,12 +6,15 @@ sg.setApiKey(`${process.env.SG_APIKEY}`)
 
 type Data = {
   name: string
+  email: string
+  message: string
 }
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  const {email, message, name} = req.body as Data
   console.log(req.body)
 
 
