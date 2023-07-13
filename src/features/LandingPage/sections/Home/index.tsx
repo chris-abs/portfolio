@@ -4,7 +4,7 @@ const HomeSection = () => {
 	return (
 		<div>
 			<main>
-				<section id="home" className="min-h-screen w-full">
+				<section id="home" className="min-h-screen">
 					<div className="flex flex-col items-center justify-center h-screen z-1">
 						<h2 className="heading text-5xl py-2 md:text-6xl z-10 ">
 							Chris Abbott

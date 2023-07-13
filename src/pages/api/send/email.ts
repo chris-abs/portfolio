@@ -2,16 +2,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import sg from '@sendgrid/mail'
 import { NextResponse } from 'next/server'
-sg.setApiKey("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")
+sg.setApiKey(`${process.env.SG_APIKEY}`)
 
 type Data = {
   name: string
+  email: string
+  message: string
 }
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+  const {email, message, name} = req.body as Data
   console.log(req.body)
 
 
