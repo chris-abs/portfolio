@@ -8,7 +8,7 @@ interface WidgetProps {
 
 const Widget: React.FC<WidgetProps> = ({ icon: Icon, label, description }) => {
 	return (
-		<div className="flex flex-col text-center max-w-[280px] ">
+		<div className="flex flex-col text-center max-w-[280px] break-all  ">
 			{Icon && <Icon size={60} className="m-auto" />}
 			<div className="flex flex-row items-center gap-4">
 				<div className="flex flex-col">

@@ -44,7 +44,7 @@ const ContactSection = () => {
 
 	return (
 		<div>
-			<main className="bg-light px-10 pb-32 md:px-20 lg:px-40 section scrollspy">
+			<main className="bg-light px-2 sm:px-10 pb-32 md:px-20 lg:px-40 section scrollspy">
 				<section id="contact" >
 					<div className="pt-32 pb-16 flex justify-center">
 						<Heading title="Contact" />
