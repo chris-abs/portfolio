@@ -8,7 +8,6 @@ body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	overflow-x: hidden
 }
 
 a {
@@ -101,12 +100,8 @@ $particleSize: 1vmin;
 $animationDuration: 6s;
 $amount: 20;
 
-.background {
-	overflow-x: none;
-	width: 100vh;
-}
 
-.background~span {
+.background>span {
 	width: $particleSize;
 	height: $particleSize;
 	border-radius: $particleSize;
