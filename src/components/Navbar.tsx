@@ -9,14 +9,14 @@ const NavBar = () => {
 
 	return (
 		<div className="sticky top-0">
-			<header className="w-full px-10 md:px-32 py-1 font-medium flex items-center justify-between bg-light text-dark">
+			<header className="w-full px-2 sm:px-8 md:px-12 lg:px-32 py-1 font-medium text-xs md:text-md flex items-center justify-between bg-light text-dark">
 				<nav className="flex gap-3">
 					<CustomLink href="#home" title="Home" />
 					<CustomLink href="#about" title="About" />
 					<CustomLink href="#portfolio" title="Portfolio" />
 					<CustomLink href="#contact" title="Contact" />
 				</nav>
-				<nav className="flex justify-center gap-4 py-3 text-gray-600">
+				<nav className="flex justify-center gap-2 sm:gap-4 py-3 text-gray-600">
 					<CustomIcon
 						href="#"
 						target={'_blank'}
