@@ -6,7 +6,8 @@ import { SiSpeedtest } from 'react-icons/si';
 import { MdDevices, MdOutlineLightbulb, MdRocketLaunch } from 'react-icons/md';
 
 import Log from '@/components/Log';
-import StatBar from '@/components/StatBar';
+// import StatBar from '@/components/StatBar';
+import Section from '@/components/Section';
 
 const statData = [
 	{ label: 'HTML', completed: 90 },
@@ -18,12 +19,8 @@ const statData = [
 
 const AboutSection = () => {
 	return (
-		<main id="about" className="bg-white px-4 pb-32 md:px-8 lg:px-40">
-			<div className="pt-32 flex justify-center">
-				<Heading title="About" />
-			</div>
-			<section className="grid pt-16 grid-cols-2 md:grid-cols-4 gap-3 place-items-center"></section>
-			<section className="grid md:grid-cols-2 gap-3 place-items-center">
+		<Section title="About">
+			<article className="grid md:grid-cols-2 gap-3 place-items-center">
 				<div className="block text-center order-last md:order-first pt-16 md:pt-0">
 					<Image
 						className="m-auto rounded-t-[30px] rounded-b-[10px]"
@@ -32,14 +29,14 @@ const AboutSection = () => {
 						width={300}
 						height={300}
 					/>
-					<div className="pt-2">
+					<header className="pt-2">
 						<Heading center title="Who's this guy?" />
-					</div>
-					<div className="text-center pb-2 text-description">
+					</header>
+					<p className="text-center pb-2 max-w-[475px] text-description">
 						I&apos;m a Front-end Developer looking for work in the UK
 						<br />I have a serious passion for UI effects, animations and
 						creating inituitive, dynamic user experiences
-					</div>
+					</p>
 					<Link href="#contact." className="text-amber_400">
 						Let&apos;s make something special
 					</Link>
@@ -71,9 +68,9 @@ const AboutSection = () => {
 						<StatBar key={idx} completed={item.completed} label={item.label} />
 					))}
 				</div> */}
-			</section>
+			</article>
 
-			<section className="grid pt-16 grid-cols-1 md:grid-cols-2 gap-3">
+			<article className="grid pt-16 grid-cols-1 md:grid-cols-2 gap-3">
 				<Log
 					title="SuperBikeFactory"
 					date="10/05/2021 - 06/06/2022"
@@ -84,8 +81,8 @@ const AboutSection = () => {
 					date="10-09-2018 - 09/05/2021"
 					description="Graduated (First Class - With Honours) in Electrical and Electronics Engineering"
 				/>
-			</section>
-		</main>
+			</article>
+		</Section >
 	);
 };
 
