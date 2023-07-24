@@ -12,11 +12,10 @@ type Data = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data>,
 ) {
-  const {email, message, name} = req.body as Data
+  const { email, message, name } = req.body as Data
   console.log(req.body)
-
 
   const msg = {
     to: 'chris.abs96@gmail.com', // Change to your recipient

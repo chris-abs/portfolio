@@ -1,13 +1,7 @@
-import Section from "@/components/Section"
+import Section from '@/components/Section'
 
 const About = () => {
-    return (
-        <Section title="about">
-        </Section>
-    )
+  return <Section title="about"></Section>
 }
-
-
-
 
 export default About
