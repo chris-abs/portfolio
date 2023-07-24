@@ -4,7 +4,7 @@ import { PiCopyright } from 'react-icons/pi'
 const Footer = () => {
   return (
     <div>
-      <footer className="relative w-full pt-12 pb-8 font-medium bg-mid text-dark">
+      <footer className="relative w-full pt-12 pb-8 font-medium bg-light text-dark">
         <section className="flex items-center justify-center">
           Chris Abbott
           <span className="px-1">

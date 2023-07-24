@@ -17,7 +17,7 @@ function LandingPage() {
         <HomeSection />
         <NavBar />
         <AboutSection />
-        {/* <PortfolioSection /> */}
+        <PortfolioSection />
         <ContactSection />
       </main>
     </div>

@@ -8,12 +8,12 @@ const NavBar = () => {
   console.log('router', router)
 
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 z-50">
       <header className="w-full px-2 sm:px-8 md:px-12 lg:px-32 py-1 font-medium text-xs md:text-md lg:text-lg flex items-center justify-between bg-light text-dark">
         <nav className="flex gap-3">
           <CustomLink href="#home" title="Home" />
           <CustomLink href="#about" title="About" />
-          {/* <CustomLink href="#portfolio" title="Portfolio" /> */}
+          <CustomLink href="#portfolio" title="Portfolio" />
           <CustomLink href="#contact" title="Contact" />
         </nav>
         <nav className="flex justify-center gap-2 sm:gap-4 py-3 text-gray-600">

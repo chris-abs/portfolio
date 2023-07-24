@@ -9,7 +9,6 @@ const PortfolioSection = () => {
           <nav className="pt-32 flex justify-center">
             <Heading title="Portfolio" />
           </nav>
-
           <div>
             <p className="text-md py-10 leading-8 text-description">
               Since the beginning of my journey as a developer, I&apos;ve done
@@ -23,9 +22,24 @@ const PortfolioSection = () => {
             </p>
           </div>
           <div className="portfolio">
-            <Project title="Meal-Planner" />
-            <Project title="Quibbler" />
-            <Project title="Webspiration" />
+            <Project
+              title="Meal-Planner"
+              description="A project created to minimalise the burden of meal-planning. Offering a wide variety of meals available any day of the week."
+              src=""
+              alt="meal-planner"
+            />
+            <Project
+              title="Quibbler"
+              description="A chat messaging service providing instant message updates, group chatting and image sharing."
+              src="/avatar.jpeg"
+              alt="quibbler"
+            />
+            {/* <Project
+              title="Webspiration"
+              description="A chat messaging service providing instant message updates, group chatting and image sharing."
+              src="/avatar.jpeg"
+              alt="quibbler"
+            /> */}
           </div>
         </section>
       </main>
