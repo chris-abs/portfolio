@@ -1,7 +1,7 @@
 import Heading from './Heading'
 
 interface SectionProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   title: string
   subTitle?: string
   grey?: boolean
