@@ -19,7 +19,7 @@ const statData = [
 
 const AboutSection = () => {
   return (
-    <Section title="About">
+    <Section id="about" title="About">
       <article className="grid md:grid-cols-2 gap-3 place-items-center">
         <div className="block text-center order-last md:order-first pt-16 md:pt-0">
           <Image

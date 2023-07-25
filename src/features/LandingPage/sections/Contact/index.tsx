@@ -43,7 +43,7 @@ const ContactSection = () => {
   }
 
   return (
-    <Section title="Contact">
+    <Section id="contact" title="Contact">
       <article className="rounded-xl shadow-lg bg-white p-16 px-4 md:px-6">
         <div className="grid grid-cols-2 gap-1 md:gap-3 pb-3 place-items-center">
           <Widget

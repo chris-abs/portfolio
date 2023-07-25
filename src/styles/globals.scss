@@ -82,18 +82,6 @@ section {
   animation: shake 0.25s;
 }
 
-.icon--cv:hover {
-  background-image: radial-gradient(
-    circle at 30% 107%,
-    #ffc4ca 0%,
-    #daa8db 5%,
-    #bb91d1 45%,
-    #4d51a3 60%,
-    #1e2a67 90%
-  );
-  outline-color: #323f8e;
-}
-
 .icon--linkedin:hover {
   background-color: #0077b5;
   outline-color: #0077b5;
@@ -168,15 +156,15 @@ $amount: 20;
   }
 }
 
-.container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 100px 50px;
-  padding: 100px 50px;
-}
+// .container {
+//   position: relative;
+//   display: grid;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   gap: 100px 50px;
+//   padding: 100px 50px;
+// }
 
 .container .card {
   position: relative;
