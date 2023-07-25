@@ -1,4 +1,5 @@
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { PiFilePdf } from 'react-icons/pi'
 import CustomLink from './CustomLink'
 import CustomIcon from './CustomIcon'
 import { useRouter } from 'next/router'
@@ -22,7 +23,7 @@ const NavBar = () => {
             target={'_blank'}
             className="hover:bg-linkedIn hover:outline-linkedIn hover:text-white"
           >
-            <i className="ri-linkedin-line m-auto">
+            <i className="m-auto">
               <AiFillLinkedin />
             </i>
           </CustomIcon>
@@ -31,8 +32,19 @@ const NavBar = () => {
             target={'_blank'}
             className="hover:bg-github hover:outline-github hover:text-white"
           >
-            <i className="ri-github-line m-auto">
+            <i className="m-auto">
               <AiFillGithub />
+            </i>
+          </CustomIcon>
+          <CustomIcon
+            href=""
+            className="hover:bg-amber_500 hover:outline-amber_500 hover:text-white"
+          >
+            <i
+              className="icon--pdf m-auto"
+              //  ref="/Chris-Abbott-CV.pdf"
+            >
+              <PiFilePdf />
             </i>
           </CustomIcon>
         </nav>
