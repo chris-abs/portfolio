@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import belossom from '../../../../../public/images/belossom.jpg'
 
 const HomeSection = () => {
   return (
@@ -10,7 +11,7 @@ const HomeSection = () => {
         <Image
           priority
           fill
-          src="/belossom.jpg"
+          src={belossom}
           alt="belossom tree"
           className="object-cover"
         />
