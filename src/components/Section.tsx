@@ -18,14 +18,16 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section
       id={id}
-      className={`mx-auto max-w-[2520px] px-4 sm:px-2 md:px-10 xl:px-20 pb-10 sm:pb-16 md:pb-32
+      className={`w-[100vw] 
        ${grey ? 'bg-light' : 'bg-white'}
       `}
     >
-      <header className="p-10 sm:p-16 md:p-24">
-        <Heading title={title} subTitle={subTitle} center />
-      </header>
-      {children}
+      <div className="mx-auto max-w-[2200px] px-4 sm:px-2 md:px-10 xl:px-20 pb-10 sm:pb-16 md:pb-32">
+        <header className="p-10 sm:p-16 md:p-24">
+          <Heading title={title} subTitle={subTitle} center />
+        </header>
+        {children}
+      </div>
     </section>
   )
 }
