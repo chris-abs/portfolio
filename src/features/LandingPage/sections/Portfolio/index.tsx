@@ -28,7 +28,7 @@ const PortfolioSection = () => {
             title="Quibbler"
             description="A chat messaging service providing instant message updates,
             group chatting and image sharing."
-            src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
+            src="/images/quibbler.png"
           />
         </div>
         <div className="h-[400px]">
