@@ -6,6 +6,7 @@ interface ButtonProps {
   disabled?: boolean
   animated?: boolean
   icon?: IconType
+  groupHidden?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   icon: Icon,
   animated,
+  groupHidden,
 }) => {
   return (
     <button
@@ -24,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled:opacity-70 disabled:cursor-not-allowed ${
         disabled || !animated ? '' : 'animate-bounce transition'
       }
+        ${groupHidden ? 'hidden group-hover:block rm-button' : ''}
       m-6 w-full px-6 py-3 bg-amber_300 text-white font-medium uppercase rounded shadow-md hover:bg-amber_400 focus:outline-none focus:ring-0 active:bg-amber_500 place-self-end `}
     >
       {Icon && <Icon size={24} className="absolute left-4 top-3" />}

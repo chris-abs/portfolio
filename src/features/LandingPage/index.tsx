@@ -4,7 +4,7 @@ import AboutSection from './sections/About'
 import PortfolioSection from './sections/Portfolio'
 import ContactSection from './sections/Contact'
 import NavBar from '@/components/Navbar'
-import Modal from '@/components/modal/Modal'
+import ProjectModal from '@/components/modal/ProjectModal'
 
 function LandingPage() {
   return (
@@ -15,7 +15,7 @@ function LandingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Modal isOpen />
+        <ProjectModal />
         <HomeSection />
         <NavBar />
         <AboutSection />
