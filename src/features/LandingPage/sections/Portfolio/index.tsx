@@ -35,7 +35,7 @@ const PortfolioSection = () => {
               title="Quibbler"
               description="A chat messaging service providing instant message updates,
               group chatting and image sharing."
-              src="/images/quibbler.png"
+              src="/images/quibbler/messages.png"
               onClick={quibblerModal.onOpen}
             />
           </div>

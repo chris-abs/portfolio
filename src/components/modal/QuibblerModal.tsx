@@ -14,16 +14,16 @@ const QuibblerModal: React.FC<QuibblerModalProps> = () => {
 
   const slides = [
     {
-      src: '/images/quibbler.png',
+      src: '/images/quibbler/login.png',
+      alt: 'Quibbler login page',
+    },
+    {
+      src: '/images/quibbler/users.png',
+      alt: 'Quibbler users page',
+    },
+    {
+      src: '/images/quibbler/full-messages.png',
       alt: 'Quibbler active conversation',
-    },
-    {
-      src: 'https://picsum.photos/seed/img2/600/400',
-      alt: 'Image 2 for carousel',
-    },
-    {
-      src: 'https://picsum.photos/seed/img3/600/400',
-      alt: 'Image 3 for carousel',
     },
   ]
 

@@ -28,12 +28,6 @@ const Card: React.FC<CardProps> = ({
         <Heading title={title} center />
         <p className="text-description">{description}</p>
       </div>
-      {/* <button
-        type="button"
-        className=" m-6 w-full px-6 py-3 bg-amber_300 text-white font-medium uppercase rounded shadow-md hover:bg-amber_400 focus:outline-none focus:ring-0 active:bg-amber_500 place-self-end animate-bounce transition"
-      >
-        read more
-      </button> */}
       <Button label="read more" onClick={onClick} animated groupHidden />
     </div>
   )
