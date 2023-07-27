@@ -9,7 +9,7 @@ const NavBar = () => {
   console.log('router', router)
 
   return (
-    <div className="sticky top-0 z-50">
+    <div className="sticky top-0 z-30">
       <header className="w-full px-2 sm:px-8 md:px-12 lg:px-32 py-1 font-medium text-xs md:text-md lg:text-lg flex items-center justify-between bg-light text-dark">
         <nav className="flex gap-3">
           <CustomLink href="#home" title="Home" />
