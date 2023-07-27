@@ -39,7 +39,8 @@ const QuibblerModal: React.FC<QuibblerModalProps> = () => {
           effortlessly, engage in dynamic group or private chats and customise
           your profile. All secured by end to end authentication. Deployed and
           ready for your seamless and immersive messaging experience,{' '}
-          <span className="text-amber_400">'VISIT QUIBBLER'</span> below.
+          <span className="text-amber_400">&apos;VISIT QUIBBLER&apos;</span>{' '}
+          below.
         </p>
       </article>
       <article>
