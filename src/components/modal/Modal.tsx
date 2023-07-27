@@ -74,8 +74,8 @@ const Modal: React.FC<ModalProps> = ({
                   ${showModal ? 'opacity-100' : 'opacity-0'}
                   `}
           >
-            <div className="translate relative flex h-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none md:h-auto lg:h-auto">
-              <div className="border-b[1px] relative flex items-center justify-center rounded-t p-6">
+            <div className="translate relative flex h-full  flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none md:h-auto lg:h-auto">
+              <div className="border-b[1px] mt-[50px] md:mt-0 relative flex items-center justify-center rounded-t p-6">
                 <button
                   onClick={handleClose}
                   className="p-d absolute left-9 border-0 transition hover:opacity-70"
