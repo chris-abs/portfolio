@@ -5,14 +5,12 @@ import Button from '../Button'
 interface ModalProps {
   isOpen?: boolean
   onClose: () => void
-  onSubmit: () => void
+  onSubmit: any
   title?: string
   body?: React.ReactElement
   footer?: React.ReactElement
   label: string
   disabled?: boolean
-  secondaryAction?: () => void
-  secondaryLabel?: string
 }
 
 const Modal: React.FC<ModalProps> = ({
@@ -24,8 +22,6 @@ const Modal: React.FC<ModalProps> = ({
   footer,
   label,
   disabled,
-  secondaryAction,
-  secondaryLabel,
 }) => {
   const [showModal, setShowModal] = useState(isOpen)
 
@@ -52,15 +48,6 @@ const Modal: React.FC<ModalProps> = ({
     onSubmit()
   }, [disabled, onSubmit])
 
-  // TODO: To use for cycling through project screenshots?
-  const handleSecondaryAction = useCallback(() => {
-    if (disabled || !secondaryAction) {
-      return
-    }
-
-    secondaryAction()
-  }, [disabled, secondaryAction])
-
   if (!isOpen) {
     return null
   }
@@ -85,7 +72,7 @@ const Modal: React.FC<ModalProps> = ({
                 <div className="text-lg font-semibold">{title}</div>
               </div>
               <div className="relative p-6 flex-auto">{body}</div>
-              <div className="flex flex-col gap-2 p-6">
+              <div className="flex flex-col gap-2 px-6 py-2">
                 <div className="flex flex-row items-center gap-4 w-full">
                   <Button
                     onClick={handleSubmit}

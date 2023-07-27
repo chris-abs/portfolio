@@ -3,10 +3,10 @@ import Card from '@/components/Card'
 import Heading from '@/components/Heading'
 import Modal from '@/components/modal/Modal'
 import Section from '@/components/Section'
-import useProjectModal from '@/hooks/useProjectModal'
+import useQuibblerModal from '@/hooks/useQuibblerModal'
 
 const PortfolioSection = () => {
-  const projectModal = useProjectModal()
+  const quibblerModal = useQuibblerModal()
   return (
     <>
       <Section id="portfolio" title="Portfolio" grey>
@@ -36,14 +36,14 @@ const PortfolioSection = () => {
               description="A chat messaging service providing instant message updates,
               group chatting and image sharing."
               src="/images/quibbler.png"
-              onClick={projectModal.onOpen}
+              onClick={quibblerModal.onOpen}
             />
           </div>
 
           <div className="h-[400px]">
             <Card
               title="Webspiration"
-              description="A project dedicated to taking bad UI/UX designs from all across the web and creating something better."
+              description="A project dedicated to taking contentious UI/UX designs from all across the web and creating something better."
               src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
               onClick={() => {}}
             />

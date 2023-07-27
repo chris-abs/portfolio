@@ -4,7 +4,7 @@ import AboutSection from './sections/About'
 import PortfolioSection from './sections/Portfolio'
 import ContactSection from './sections/Contact'
 import NavBar from '@/components/Navbar'
-import ProjectModal from '@/components/modal/ProjectModal'
+import ProjectModal from '@/components/modal/QuibblerModal'
 
 function LandingPage() {
   return (

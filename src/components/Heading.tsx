@@ -14,7 +14,7 @@ const Heading: React.FC<HeadingProps> = ({ title, subTitle, center }) => {
       >
         {title}
       </h2>
-      <h3 className="mt-2 font-light text-neutral-500">{subTitle}</h3>
+      <h3 className="mt-2 font-light text-description_light">{subTitle}</h3>
     </div>
   )
 }

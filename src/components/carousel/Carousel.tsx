@@ -1,50 +1,48 @@
-import { useState } from 'react'
-import './Carousel.styles.css'
+import React, { useState } from 'react'
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
 
-const Carousel = ({ slides }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
-    setCurrentIndex(newIndex)
+export const Carousel = ({ data }) => {
+  const [slide, setSlide] = useState(0)
+
+  const nextSlide = () => {
+    setSlide(slide === data.length - 1 ? 0 : slide + 1)
   }
-  const goToNext = () => {
-    const isLastSlide = currentIndex === slides.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex + 1
-    setCurrentIndex(newIndex)
-  }
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex)
-  }
-  const slideStylesWidthBackground = {
-    backgroundImage: `url(${slides[currentIndex].url})`,
+
+  const prevSlide = () => {
+    setSlide(slide === 0 ? data.length - 1 : slide - 1)
   }
 
   return (
-    <>
-      <div className="sliderStyles">
-        <div>
-          <div onClick={goToPrevious} className="leftArrowStyles">
-            ❰
-          </div>
-          <div onClick={goToNext} className="rightArrowStyles">
-            ❱
-          </div>
-        </div>
-        <div className="slideStyles slideStylesWidthBackground"></div>
-        <div className="dotsContainerStyles">
-          {slides.map((slide, slideIndex) => (
-            <div
-              className="dotStyle"
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-            >
-              ●
-            </div>
-          ))}
-        </div>
-      </div>
-    </>
+    <div className="carousel">
+      <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
+      {data.map((item, idx) => {
+        return (
+          <img
+            src={item.src}
+            alt={item.alt}
+            key={idx}
+            className={slide === idx ? 'slide' : 'slide slide-hidden'}
+          />
+        )
+      })}
+      <BsArrowRightCircleFill
+        onClick={nextSlide}
+        className="arrow arrow-right"
+      />
+      <span className="indicators">
+        {data.map((_, idx) => {
+          return (
+            <button
+              key={idx}
+              className={
+                slide === idx ? 'indicator' : 'indicator indicator-inactive'
+              }
+              onClick={() => setSlide(idx)}
+            ></button>
+          )
+        })}
+      </span>
+    </div>
   )
 }
 

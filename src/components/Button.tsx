@@ -2,11 +2,12 @@ import { IconType } from 'react-icons'
 
 interface ButtonProps {
   label: string
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+  onClick: any
   disabled?: boolean
   animated?: boolean
   icon?: IconType
   groupHidden?: boolean
+  type?: any
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,12 +17,13 @@ const Button: React.FC<ButtonProps> = ({
   icon: Icon,
   animated,
   groupHidden,
+  type,
 }) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      type="button"
+      type={type}
       className={`
       disabled:opacity-70 disabled:cursor-not-allowed ${
         disabled || !animated ? '' : 'animate-bounce transition'
