@@ -53,8 +53,8 @@ const Modal: React.FC<ModalProps> = ({
   }
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden bg-neutral-800/70 outline-none focus:outline-none">
-        <div className="relative mx-auto my-6 h-full w-full md:h-auto md:w-5/6 lg:h-auto lg:w-4/6 xl:w-4/5 2xl:w-3/5 ">
+      <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-scroll overflow-x-hidden bg-neutral-800/70 outline-none focus:outline-none">
+        <div className="relative mx-auto my-6 h-auto w-full md:h-auto md:w-5/6 lg:h-auto lg:w-4/6 xl:w-4/5 2xl:w-3/5 ">
           <div
             className={`translate h-full duration-300 
                   ${showModal ? 'translate-y-0' : 'translate-y-full'} 
@@ -71,7 +71,7 @@ const Modal: React.FC<ModalProps> = ({
                 </button>
                 <div className="text-lg font-semibold">{title}</div>
               </div>
-              <div className="relative p-6 flex-auto">{body}</div>
+              <div className="relative p-6 flex-auto ">{body}</div>
               <div className="flex flex-col gap-2 px-6 py-2">
                 <div className="flex flex-row items-center gap-4 w-full">
                   <Button

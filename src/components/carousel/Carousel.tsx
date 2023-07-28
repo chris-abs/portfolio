@@ -13,7 +13,7 @@ export const Carousel = ({ data }) => {
   }
 
   return (
-    <div className="carousel">
+    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-4/6 h-4/6 md:h-3/6 lg:h-2/6">
       <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
       {data.map((item, idx) => {
         return (
