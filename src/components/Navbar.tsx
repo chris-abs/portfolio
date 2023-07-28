@@ -19,7 +19,7 @@ const NavBar = () => {
         </nav>
         <nav className="flex justify-center gap-2 sm:gap-4 py-3 text-gray-600">
           <CustomIcon
-            href="#"
+            href="https://www.linkedin.com/in/chris-abbott-078b21212/"
             target={'_blank'}
             className="hover:bg-linkedIn hover:outline-linkedIn hover:text-white"
           >
@@ -31,7 +31,7 @@ const NavBar = () => {
             </i>
           </CustomIcon>
           <CustomIcon
-            href="#"
+            href="https://github.com/chris-abs"
             target={'_blank'}
             className="hover:bg-github hover:outline-github hover:text-white"
           >
