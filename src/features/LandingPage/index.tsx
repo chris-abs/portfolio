@@ -5,6 +5,8 @@ import PortfolioSection from './sections/Portfolio'
 import ContactSection from './sections/Contact'
 import NavBar from '@/components/Navbar'
 import ProjectModal from '@/components/modal/QuibblerModal'
+import MPModal from '@/components/modal/MPModal'
+import WebspirationModal from '@/components/modal/WebspirationModal'
 
 function LandingPage() {
   return (
@@ -16,6 +18,8 @@ function LandingPage() {
       </Head>
       <main>
         <ProjectModal />
+        <MPModal />
+        <WebspirationModal />
         <HomeSection />
         <NavBar />
         <AboutSection />

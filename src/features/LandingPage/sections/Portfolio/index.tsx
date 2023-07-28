@@ -1,12 +1,13 @@
-import Button from '@/components/Button'
 import Card from '@/components/Card'
-import Heading from '@/components/Heading'
-import Modal from '@/components/modal/Modal'
 import Section from '@/components/Section'
+import useMPModal from '@/hooks/useMPModal'
 import useQuibblerModal from '@/hooks/useQuibblerModal'
+import useWebspirationModal from '@/hooks/useWebspirationModal'
 
 const PortfolioSection = () => {
   const quibblerModal = useQuibblerModal()
+  const mpModal = useMPModal()
+  const webspirationModal = useWebspirationModal()
   return (
     <>
       <Section id="portfolio" title="Portfolio" grey>
@@ -27,7 +28,7 @@ const PortfolioSection = () => {
               description="A project created to minimalise the burden of meal-planning.
               Offering a wide variety of meals available any day of the week."
               src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80"
-              onClick={() => {}}
+              onClick={mpModal.onOpen}
             />
           </div>
           <div className="h-[400px]">
@@ -45,7 +46,7 @@ const PortfolioSection = () => {
               title="Webspiration"
               description="A project dedicated to taking contentious UI/UX designs from all across the web and creating something better."
               src="https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80"
-              onClick={() => {}}
+              onClick={webspirationModal.onOpen}
             />
           </div>
         </div>

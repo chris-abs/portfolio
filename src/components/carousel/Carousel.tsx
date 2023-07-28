@@ -24,7 +24,7 @@ export const Carousel = ({ data }) => {
             src={item.src}
             alt={item.alt}
             key={idx}
-            className={`slide rounded-lg h-full w-full
+            className={`shadow rounded-lg h-full w-full
               ${slide === idx ? '' : 'hidden'}
             `}
           />

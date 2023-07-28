@@ -5,7 +5,6 @@ import { HiOutlineMailOpen } from 'react-icons/hi'
 import { BiPhoneCall } from 'react-icons/bi'
 import { useState } from 'react'
 import Section from '@/components/Section'
-import Button from '@/components/Button'
 
 const ContactSection = () => {
   const {
