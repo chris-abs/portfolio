@@ -9,13 +9,7 @@ interface CardProps {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const Card: React.FC<CardProps> = ({
-  title,
-  description,
-  src,
-  link,
-  onClick,
-}) => {
+const Card: React.FC<CardProps> = ({ title, description, src, onClick }) => {
   return (
     <div className="group card my-[100px] relative flex justify-center items-center w-[350px] max-w-[100%] h-[300px] bg-white rounded-[20px] shadow-md hover:h-[400px] transition-all duration-700">
       <div className="img-box absolute top-5 w-[300px] h-[220px] bg-dark rounded-xl overflow-hidden">
@@ -28,7 +22,7 @@ const Card: React.FC<CardProps> = ({
         <Heading title={title} center />
         <p className="text-description">{description}</p>
       </div>
-      <Button label="read more" onClick={onClick} animated groupHidden />
+      <Button label="read more" onClick={onClick} groupHidden />
     </div>
   )
 }
