@@ -13,7 +13,7 @@ export const Carousel = ({ data }) => {
   }
 
   return (
-    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-4/6 h-auto lg:h-[580px]">
+    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-auto h-auto lg:h-[580px]">
       <BsArrowLeftCircleFill
         onClick={prevSlide}
         className="arrow absolute w-8 h-8 text-white hover:pointer left-4"

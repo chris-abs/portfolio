@@ -1,5 +1,4 @@
 import useProjectModal from '@/hooks/useQuibblerModal'
-import { useCallback, useState } from 'react'
 import Modal from './Modal'
 import Heading from '../Heading'
 import Carousel from '../carousel/Carousel'
