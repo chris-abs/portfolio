@@ -13,7 +13,7 @@ export const Carousel = ({ data }) => {
   }
 
   return (
-    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-4/6 h-4/6 md:h-3/6 lg:h-2/6">
+    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-4/6 h-auto lg:h-[580px]">
       <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
       {data.map((item, idx) => {
         return (
@@ -21,13 +21,15 @@ export const Carousel = ({ data }) => {
             src={item.src}
             alt={item.alt}
             key={idx}
-            className={slide === idx ? 'slide' : 'slide slide-hidden'}
+            className={`slide rounded-lg h-full w-full
+              ${slide === idx ? '' : 'hidden'}
+            `}
           />
         )
       })}
       <BsArrowRightCircleFill
         onClick={nextSlide}
-        className="arrow arrow-right"
+        className="arrow absolute w-8 h-8 arrow-right"
       />
       <span className="indicators">
         {data.map((_, idx) => {
