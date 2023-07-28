@@ -14,7 +14,10 @@ export const Carousel = ({ data }) => {
 
   return (
     <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-4/6 h-auto lg:h-[580px]">
-      <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
+      <BsArrowLeftCircleFill
+        onClick={prevSlide}
+        className="arrow absolute w-8 h-8 text-white hover:pointer left-4"
+      />
       {data.map((item, idx) => {
         return (
           <img
@@ -29,16 +32,16 @@ export const Carousel = ({ data }) => {
       })}
       <BsArrowRightCircleFill
         onClick={nextSlide}
-        className="arrow absolute w-8 h-8 arrow-right"
+        className="arrow absolute w-8 h-8 text-white hover:pointer right-4"
       />
-      <span className="indicators">
+      <span className="flex absolute bottom-4">
         {data.map((_, idx) => {
           return (
             <button
               key={idx}
-              className={
-                slide === idx ? 'indicator' : 'indicator indicator-inactive'
-              }
+              className={`bg-white h-2 w-2 rounded cursor-pointer
+                ${slide === idx ? 'indicator' : 'indicator indicator-inactive'}
+              `}
               onClick={() => setSlide(idx)}
             ></button>
           )

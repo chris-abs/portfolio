@@ -16,7 +16,7 @@ const CustomIcon: React.FC<CustomIconProps> = ({
   return (
     <Link
       href={href}
-      className={`${className} inline-flex w-[34px] h-[34px] no-underline text-2xl text-dark rounded-full icon`}
+      className={`${className} inline-flex w-5 h-5 md:w-[34px] md:h-[34px] no-underline text-2xl text-dark rounded-full icon`}
       target={target}
     >
       {children}

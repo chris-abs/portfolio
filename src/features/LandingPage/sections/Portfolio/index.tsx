@@ -20,7 +20,7 @@ const PortfolioSection = () => {
           <span className="text-amber_400"> projects, </span>some of which, are
           listed below!
         </p>
-        <div className="container grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 relative grid justify-center place-items-center content-center flex-wrap gap-6">
+        <div className="container grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 relative grid justify-center place-items-center lg:mx-auto flex-wrap gap-6 pb-24 md:pb-0">
           <div className="h-[400px]">
             <Card
               title="Meal-Planner"

@@ -23,7 +23,10 @@ const NavBar = () => {
             target={'_blank'}
             className="hover:bg-linkedIn hover:outline-linkedIn hover:text-white"
           >
-            <i className="m-auto">
+            <i className="m-auto md:hidden">
+              <AiFillLinkedin size={14} />
+            </i>
+            <i className="m-auto hidden md:block">
               <AiFillLinkedin />
             </i>
           </CustomIcon>
@@ -32,7 +35,10 @@ const NavBar = () => {
             target={'_blank'}
             className="hover:bg-github hover:outline-github hover:text-white"
           >
-            <i className="m-auto">
+            <i className="m-auto md:hidden">
+              <AiFillGithub size={16} />
+            </i>
+            <i className="m-auto hidden md:block">
               <AiFillGithub />
             </i>
           </CustomIcon>
@@ -40,10 +46,14 @@ const NavBar = () => {
             href=""
             className="hover:bg-amber_500 hover:outline-amber_500 hover:text-white"
           >
-            <i
+            {/* <i
               className="icon--pdf m-auto"
               //  ref="/Chris-Abbott-CV.pdf"
-            >
+            > */}
+            <i className="m-auto md:hidden">
+              <PiFilePdf size={16} />
+            </i>
+            <i className="m-auto hidden md:block">
               <PiFilePdf />
             </i>
           </CustomIcon>
