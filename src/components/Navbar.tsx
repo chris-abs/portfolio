@@ -3,6 +3,7 @@ import { PiFilePdf } from 'react-icons/pi'
 import CustomLink from './CustomLink'
 import CustomIcon from './CustomIcon'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const NavBar = () => {
   const router = useRouter()
@@ -43,13 +44,11 @@ const NavBar = () => {
             </i>
           </CustomIcon>
           <CustomIcon
-            href=""
+            href="Chris-Abbott-CV.pdf"
+            download
+            target={'_blank'}
             className="hover:bg-amber_500 hover:outline-amber_500 hover:text-white"
           >
-            {/* <i
-              className="icon--pdf m-auto"
-              //  ref="/Chris-Abbott-CV.pdf"
-            > */}
             <i className="m-auto md:hidden">
               <PiFilePdf size={16} />
             </i>
