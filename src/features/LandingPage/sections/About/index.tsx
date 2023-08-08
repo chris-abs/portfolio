@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { SiSpeedtest } from 'react-icons/si'
 import { MdDevices, MdOutlineLightbulb, MdRocketLaunch } from 'react-icons/md'
+import avatar from '../../../../../public/images/avatar.jpeg'
 
 import Log from '@/components/Log'
 // import StatBar from '@/components/StatBar';
@@ -19,12 +20,12 @@ const statData = [
 
 const AboutSection = () => {
   return (
-    <Section title="About">
+    <Section id="about" title="About">
       <article className="grid md:grid-cols-2 gap-3 place-items-center">
         <div className="block text-center order-last md:order-first pt-16 md:pt-0">
           <Image
             className="m-auto rounded-t-[30px] rounded-b-[10px]"
-            src="/avatar.jpeg"
+            src={avatar}
             alt=""
             width={300}
             height={300}

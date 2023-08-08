@@ -34,11 +34,6 @@ a {
   src: local('Burtons');
 }
 
-section {
-  max-width: 1400px;
-  margin-inline: auto;
-}
-
 .portfolio {
   display: flex;
   height: 30rem;
@@ -82,21 +77,14 @@ section {
   animation: shake 0.25s;
 }
 
-.icon--darkmode:hover {
-  background-image: radial-gradient(
-    circle at 30% 107%,
-    #ffc4ca 0%,
-    #daa8db 5%,
-    #bb91d1 45%,
-    #4d51a3 60%,
-    #1e2a67 90%
-  );
-  outline-color: #323f8e;
-}
-
 .icon--linkedin:hover {
   background-color: #0077b5;
   outline-color: #0077b5;
+}
+
+.icon--pdf:hover {
+  background-color: #d88459;
+  outline-color: #d88459;
 }
 
 .icon--github:hover {
@@ -161,4 +149,64 @@ $amount: 20;
   40% {
     transform: rotate(-15deg);
   }
+}
+
+.container .card .img-box,
+.rm-button {
+  transition: 0.5s;
+}
+
+.container .card:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .content {
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  top: 130px;
+  height: 250px;
+}
+
+@media (max-width: 480px) {
+  .container .card {
+    width: 230px;
+    border-radius: 15px;
+  }
+
+  .container .card .img-box {
+    width: 185px;
+    border-radius: 10px;
+  }
+
+  .container .card .content p {
+    font-size: 0.8rem;
+  }
+
+  .container .card .content a {
+    font-size: 0.9rem;
+  }
+}
+
+.shadow {
+  box-shadow: 0px 0px 7px #666;
+}
+
+.arrow {
+  filter: drop-shadow(0px 0px 5px #1b1b1b);
+}
+
+.indicator {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px #555;
+  margin: 0 0.2rem;
+}
+
+.indicator-inactive {
+  background-color: #1b1b1b;
 }

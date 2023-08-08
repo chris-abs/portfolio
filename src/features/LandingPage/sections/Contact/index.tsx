@@ -43,14 +43,20 @@ const ContactSection = () => {
   }
 
   return (
-    <Section title="Contact" grey>
-      <article className="rounded-xl shadow-lg bg-white p-16 px-4 md:px-6">
+    <Section id="contact" title="Contact">
+      <article className="rounded-xl shadow-lg bg-white p-16 px-4 md:px-6 max-w-[1600px] mx-auto">
         <div className="grid grid-cols-2 gap-1 md:gap-3 pb-3 place-items-center">
-          <Widget label="Phone" description="07949 149878" icon={BiPhoneCall} />
+          <Widget
+            label="Phone"
+            description="07949 149878"
+            icon={BiPhoneCall}
+            wordBreak
+          />
           <Widget
             label="Email"
             description="chris.abs96@gmail.com"
             icon={HiOutlineMailOpen}
+            wordBreak
           />
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>

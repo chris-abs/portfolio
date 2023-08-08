@@ -4,6 +4,9 @@ import AboutSection from './sections/About'
 import PortfolioSection from './sections/Portfolio'
 import ContactSection from './sections/Contact'
 import NavBar from '@/components/Navbar'
+import ProjectModal from '@/components/modal/QuibblerModal'
+import MPModal from '@/components/modal/MPModal'
+import WebspirationModal from '@/components/modal/WebspirationModal'
 
 function LandingPage() {
   return (
@@ -14,10 +17,13 @@ function LandingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <ProjectModal />
+        <MPModal />
+        <WebspirationModal />
         <HomeSection />
         <NavBar />
         <AboutSection />
-        {/* <PortfolioSection /> */}
+        <PortfolioSection />
         <ContactSection />
       </main>
     </div>
