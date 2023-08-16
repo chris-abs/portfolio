@@ -10,6 +10,7 @@ const HomeSection = () => {
         </h1>
         <Image
           priority
+          loading="eager"
           fill
           src={belossom}
           alt="belossom tree"
