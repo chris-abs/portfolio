@@ -14,7 +14,7 @@ const HomeSection = () => {
           fill
           src={belossom}
           alt="belossom tree"
-          className="object-cover w-full h-aut"
+          className="object-cover"
         />
         <div className="overflow-x-none background z-10 relative">
           <span></span>
