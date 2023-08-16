@@ -8,10 +8,8 @@ const HomeSection = () => {
         <h1 className="heading text-4xl lg:text-5xl xl:text-6xl md:py-1 lg:py-2 z-10 ">
           Chris Abbott
         </h1>
-        <Image
-          priority
-          fill
-          src={belossom}
+        <img
+          src="/images/belossom.jpg"
           alt="belossom tree"
           className="object-cover"
         />
