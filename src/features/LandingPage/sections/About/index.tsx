@@ -74,7 +74,7 @@ const AboutSection = () => {
       <article className="grid pt-16 grid-cols-1 md:grid-cols-2 gap-3">
         <Log
           title="SuperBikeFactory"
-          date="10/05/2021 - 06/06/2022"
+          date="10/05/2021 - 06/06/2023"
           description="Worked as a Front-End Developer focussing on e-comerce products ranging from customer facing domains to internal tooling systems."
         />
         <Log
