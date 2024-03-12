@@ -10,7 +10,7 @@ const Footer = () => {
           <span className="px-1">
             <PiCopyright />
           </span>
-          2023
+          {new Date().getFullYear()}
         </section>
         <a href="#home">
           <button className="absolute -top-[22px] left-1/2 transform -translate-x-1/2  p-2 bg-amber_300 text-white font-medium uppercase rounded shadow-md hover:bg-amber_400 focus:outline-none focus:ring-0 active:bg-amber_500">

@@ -1,13 +1,10 @@
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 import { PiFilePdf } from 'react-icons/pi'
+
 import CustomLink from './CustomLink'
 import CustomIcon from './CustomIcon'
-import { useRouter } from 'next/router'
 
 const NavBar = () => {
-  const router = useRouter()
-  console.log('router', router)
-
   return (
     <div className="sticky top-0 z-30">
       <header className="w-full px-2 sm:px-8 md:px-12 lg:px-32 py-1 font-medium text-xs md:text-md lg:text-lg flex items-center justify-between bg-light text-dark">

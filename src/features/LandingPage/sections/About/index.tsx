@@ -38,7 +38,7 @@ const AboutSection = () => {
             <br />I have a serious passion for UI effects, animations and
             creating inituitive, dynamic user experiences
           </p>
-          <Link href="#contact." className="text-amber_400">
+          <Link href="#contact" className="text-amber_400">
             Let&apos;s make something special
           </Link>
         </div>
@@ -71,7 +71,12 @@ const AboutSection = () => {
 				</div> */}
       </article>
 
-      <article className="grid pt-16 grid-cols-1 md:grid-cols-2 gap-3">
+      <article className="grid pt-16 grid-cols-1 md:grid-cols-3 gap-3">
+        <Log
+          title="dentsu"
+          date="23/10/23"
+          description="Currently working as a Developer contributing to diverse projects aimed at montitoring and predicting clients' marketing trendlines. "
+        />
         <Log
           title="SuperBikeFactory"
           date="10/05/2021 - 06/06/2023"
