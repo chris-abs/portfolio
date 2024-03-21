@@ -40,7 +40,7 @@ const NavBar = () => {
             </i>
           </CustomIcon>
           <CustomIcon
-            href="Chris-Abbott_CV.pdf"
+            href="Chris.Abbott-CV.pdf"
             download
             target={'_blank'}
             className="hover:bg-amber_500 hover:outline-amber_500 hover:text-white"
