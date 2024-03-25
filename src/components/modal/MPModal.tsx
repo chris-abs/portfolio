@@ -44,7 +44,7 @@ const MPModal: React.FC<MPModalProps> = () => {
         <Carousel data={slides} />
       </article>
       <article className="py-4">
-        <p className="text-description pb-1">
+        <p className="text-description pb-2">
           Meal-Planner is the go-to application for simplifying meal planning
           and grocery shopping. With seamless authentication and authorisation,
           users can create households to collaborate with family members or
