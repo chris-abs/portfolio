@@ -13,16 +13,28 @@ const MPModal: React.FC<MPModalProps> = () => {
 
   const slides = [
     {
-      src: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80',
-      alt: 'Meal-Planner login page',
+      src: '/images/mp/register.png',
+      alt: 'Meal-Planner register modal',
     },
     {
-      src: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80',
-      alt: 'Meal-Planner',
+      src: '/images/mp/login.png',
+      alt: 'Meal-Planner login modal',
     },
     {
-      src: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80',
-      alt: 'Meal-Planner ',
+      src: '/images/mp/menu.png',
+      alt: 'Meal-Planner menu',
+    },
+    {
+      src: '/images/mp/menu-mobile.png',
+      alt: 'Meal-Planner menu mobile view',
+    },
+    {
+      src: '/images/mp/favourites.png',
+      alt: 'Meal-Planner favourites filter',
+    },
+    {
+      src: '/images/mp/shopping-list.png',
+      alt: 'Meal-Planner favourites filter',
     },
   ]
 
@@ -32,12 +44,28 @@ const MPModal: React.FC<MPModalProps> = () => {
         <Carousel data={slides} />
       </article>
       <article className="py-4">
-        <p className="text-description">
-          Meal-planner description
+        <p className="text-description pb-1">
+          Meal-Planner is the go-to application for simplifying meal planning
+          and grocery shopping. With seamless authentication and authorisation,
+          users can create households to collaborate with family members or
+          roommates. Together, users can easily create and customize meal plans,
+          selecting dishes for each day of the week. One of Meal-Planner&apos;s
+          standout features is its automatic generation of shopping lists. Once
+          a meal plan is finalised, the app compiles a comprehensive list of
+          ingredients needed for selected meals, streamlining the shopping
+          process. Accessible across multiple devices, Meal-Planner ensures that
+          users can manage their meal plans and shopping lists anytime,
+          anywhere.
           {/* <span className="text-amber_400">
             &apos;VISIT Meal-Planner&apos;
           </span>{' '}
           below. */}
+        </p>
+        <p className="text-description">
+          Meal-Planner is currently undergoing a comprehensive backend rewrite,
+          transitioning away from using Prisma as an ORM to manage MongoDB and
+          instead using a native MongoDB interaction with Go. Check back soon to
+          keep up with the latest!
         </p>
       </article>
       <article>
