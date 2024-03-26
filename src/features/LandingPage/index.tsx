@@ -7,6 +7,7 @@ import NavBar from '@/components/Navbar'
 import ProjectModal from '@/components/modal/QuibblerModal'
 import MPModal from '@/components/modal/MPModal'
 import WebspirationModal from '@/components/modal/WebspirationModal'
+import QuibblerModal from '@/components/modal/QuibblerModal'
 
 function LandingPage() {
   return (
@@ -17,7 +18,7 @@ function LandingPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <ProjectModal />
+        <QuibblerModal />
         <MPModal />
         <WebspirationModal />
         <HomeSection />

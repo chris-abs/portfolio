@@ -1,4 +1,4 @@
-import useProjectModal from '@/hooks/useQuibblerModal'
+import useQuibblerModal from '@/hooks/useQuibblerModal'
 import Modal from './Modal'
 import Heading from '../Heading'
 import Carousel from '../carousel/Carousel'
@@ -6,7 +6,7 @@ import Carousel from '../carousel/Carousel'
 interface QuibblerModalProps {}
 
 const QuibblerModal: React.FC<QuibblerModalProps> = () => {
-  const projectModal = useProjectModal()
+  const quibblerModal = useQuibblerModal()
   const onSubmit = () => {
     window.open('https://quibbler.chrisabbott.dev/')
   }
@@ -86,8 +86,8 @@ const QuibblerModal: React.FC<QuibblerModalProps> = () => {
 
   return (
     <Modal
-      isOpen={projectModal.isOpen}
-      onClose={projectModal.onClose}
+      isOpen={quibblerModal.isOpen}
+      onClose={quibblerModal.onClose}
       onSubmit={onSubmit}
       title="Quibbler"
       label="visit quibbler"

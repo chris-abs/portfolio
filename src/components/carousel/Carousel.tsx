@@ -1,52 +1,65 @@
 import React, { useState } from 'react'
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
 
-export const Carousel = ({ data }) => {
-  const [slide, setSlide] = useState(0)
+interface CarouselProps {
+  data: { src: string; alt: string }[]
+}
 
-  const nextSlide = () => {
-    setSlide(slide === data.length - 1 ? 0 : slide + 1)
+const Carousel: React.FC<CarouselProps> = ({ data }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
   }
 
-  const prevSlide = () => {
-    setSlide(slide === 0 ? data.length - 1 : slide - 1)
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1,
+    )
+  }
+
+  const goToPrevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1,
+    )
   }
 
   return (
-    <div className="carousel relative flex justify-center items-center w-6/6 md:w-5/6 lg:w-auto h-auto lg:h-[580px]">
-      <BsArrowLeftCircleFill
-        onClick={prevSlide}
-        className="arrow absolute w-8 h-8 text-white hover:pointer left-4"
-      />
-      {data.map((item, idx) => {
-        return (
+    <div className="carousel relative w-full h-[580px] overflow-hidden">
+      {data.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ zIndex: index === currentIndex ? 10 : 1 }}
+        >
           <img
-            src={item.src}
-            alt={item.alt}
-            key={idx}
-            className={`shadow rounded-lg h-full w-full
-              ${slide === idx ? '' : 'hidden'}
-            `}
+            src={slide.src}
+            alt={slide.alt}
+            className="h-full max-w-full mx-auto object-cover"
           />
-        )
-      })}
-      <BsArrowRightCircleFill
-        onClick={nextSlide}
-        className="arrow absolute w-8 h-8 text-white hover:pointer right-4"
+        </div>
+      ))}
+      <BsArrowLeftCircleFill
+        onClick={goToPrevSlide}
+        className="z-20 arrow absolute w-8 h-8 text-white hover:pointer left-4 top-60"
       />
-      <span className="flex absolute bottom-4">
-        {data.map((_, idx) => {
-          return (
-            <button
-              key={idx}
-              className={`bg-white h-2 w-2 rounded cursor-pointer
-                ${slide === idx ? 'indicator' : 'indicator indicator-inactive'}
-              `}
-              onClick={() => setSlide(idx)}
-            ></button>
-          )
-        })}
-      </span>
+      <BsArrowRightCircleFill
+        onClick={goToNextSlide}
+        className="z-20 arrow absolute w-8 h-8 text-white hover:pointer right-4 top-60"
+      />
+      <div className="z-20 flex absolute bottom-1 left-0 right-0 justify-center items-center">
+        {data.map((_, idx) => (
+          <button
+            key={idx}
+            className={`h-0.5 w-3.5 rounded-full mx-1 cursor-pointer p-1 ${
+              idx === currentIndex ? 'bg-amber_300 h-3.5 w-3.5' : 'bg-gray-400'
+            }`}
+            onClick={() => goToSlide(idx)}
+          ></button>
+        ))}
+      </div>
     </div>
   )
 }
